@@ -1,0 +1,76 @@
+#privacy_group {
+    /* opacity: 0; */
+    /* display: none; */
+    top: 100%;
+    display: none;
+    background: #526190;
+}
+
+#privacy_title {
+    color: white;
+    font-size: 28px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#privacy_content {
+    background: white;
+    width: 90%;
+    padding: 10px;
+    border: medium solid #526190;
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+#privacy_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.privacy_button{
+    background: none;
+    color: white;
+    border: none;
+    width: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    /* display: inline-block; */
+}
+
+#privacy_choice {
+    /* display: flex; */
+    margin-top: 10px;
+    margin-bottom: 47px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-direction: row; */
+    width: 90%;
+}
+
+#privacy_agreed{
+    /* position: absolute; */
+    left:0;
+}
+#privacy_denied{
+    position: absolute;
+    right:5%;
+}
+
+
+#privacy_return {
+    margin-top: 10px;
+    margin-bottom: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: row; */
+    width: 90%;
+    display: none;
+}
+
+#privacy_understand{
+    width:100%;
+}

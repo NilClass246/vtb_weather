@@ -1,0 +1,21 @@
+#language_group {
+    display: none;
+    opacity: 0;
+}
+
+#ko_button {
+    font-family: galmuri;
+}
+
+/*本地化*/
+[lang]{
+	display: none;
+}
+
+[lang=zh]{
+	display: unset;
+}
+
+[lang=ko]{
+    font-family: galmuri;
+}

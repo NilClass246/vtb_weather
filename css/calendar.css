@@ -1,0 +1,94 @@
+#calendar_group{
+    /* display: none; */
+    /* opacity: 0; */
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+}
+
+#calendar_area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar_wrapper {
+    top: 55px;
+    position:absolute;
+}
+
+#calendar_panel {
+    color: #003772;
+    background-color: #e1e9eb;
+    border: medium solid #003772;
+    outline: thick solid #e1e9eb;
+    /* box-sizing: content-box; */
+    /* padding: 10px; */
+    text-align: center;
+    /* margin-top: auto; */
+    /* margin-right: auto; */
+    /* margin-left: 25px; */
+    /* margin-bottom: auto; */
+    /* display: none; */
+    /* position: absolute; */
+    /* top:50px; */
+    /* left: +50%; */
+    /* transform: translateX(-50%); */
+    /* margin: auto; */
+    /* overflow: hidden; */
+}
+
+#live_notice_panel {
+    padding: 5px;
+    margin-top: 15px;
+    color: #003772;
+    background-color: #e1e9eb;
+    border: medium solid #003772;
+    outline: thick solid #e1e9eb;
+    width: inherit;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#live_notice_content{
+    margin-top: 5px;
+    width: inherit;
+    font-size: 16px;
+    font-weight:100;
+}
+
+#calendar_table {
+    /* outline: medium solid #616EA0; */
+    margin: auto;
+    border-collapse: collapse;
+    /* box-sizing: border-box; */
+}
+#calendar_table tr th {
+    padding: 2px;
+    border: medium solid #003772;
+    box-sizing: border-box;
+}
+#calendar_table tr td {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    border: medium solid #003772;
+    box-sizing: border-box;
+}
+
+#calendar_title {
+    font-size: 22px;
+    padding-top: 10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    border: medium solid #003772;
+    box-sizing: border-box;
+}
+
+.crossed{
+    background-image: linear-gradient(to bottom left,  transparent calc(50% - 2px), #003772, transparent calc(50% + 2px)); 
+}

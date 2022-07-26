@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+#rain-layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    image-rendering: pixelated;
+    top: 0;
+}
+
+#character {
+    position: absolute;
+    bottom: 0px;
+    width: 530px;
+    height: 690px;
+    overflow: hidden;
+    background-image: url(../img/character/walk.png);
+    background-size: auto 100%;
+    /* [disabled]opacity: 0; */
+    left: 530px;
+    image-rendering: pixelated;
+}

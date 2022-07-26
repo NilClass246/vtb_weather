@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+#foreground_group {
+    display: none;
+    opacity: 0;
+}
+
+#info_section {
+    margin: 20px;
+    color: white;
+    text-shadow: 0.1em 0.1em #000000;
+    position: relative;
+    margin-top: 35px;
+    /* [disabled]position: absolute; */
+    /* top: -3.75rem; */
+    /* opacity: 0; */
+    /* transform: translate(0rem,-3.75rem); */
+}
+
+#upper_info{
+    display: flex;
+}
+
+#info_location {
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: right;
+}
+
+#info_tempMM {
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: right;
+}
+
+#info_textWeather{
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+#info_textLuna{
+    font-size: 24px;
+    font-weight: bolder;
+    padding-left: 4px;
+}
+
+#info_temp{
+    font-size:83px;
+    /* position: absolute; */
+    font-weight: bolder;
+    margin-top: 7px;
+    margin-right: 7px;
+    /* left:0; */
+    /* top:0; */
+    /* margin-right: 13px; */
+    /* margin-top: 15px; */
+}
+
+#foreground_group .center_area #display_section {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+.front_button {
+    display: block;
+    background-color: #616ea0;
+    padding: 5px;
+    border: none;
+    /* [disabled]border-radius: 5px; */
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+
+.front_button:after{
+	content: " ->";
+	opacity: 0;
+	display: none;
+}
+
+.front_button {
+	transition-duration: 0.4s;
+}
+
+.front_button:hover {
+	transform: translate(5px, 0px);
+}
+
+.front_button:hover:after {
+  	opacity: 1;
+	display: unset;
+}
+
+.front_img_button {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+    /* margin-top: 2px; */
+    /* margin-bottom: 2px; */
+    transition-duration: 0.5s;
+    transition: ease-in-out;
+}
+#front_refresh_button {
+    height: 36px;
+}
+
+.front_img_button:after{
+    content: "";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    background-size: cover;
+    transition-duration: 0.5s;
+}
+
+#front_refresh_button:after  {
+    height: 36px;
+    background-image: url(../img/icons/Refresh.png);
+}
+
+#front_location_button:after  {
+    background-image: url(../img/icons/Earth.png);
+}
+
+#front_calendar_button:after  {
+    background-image: url(../img/icons/List.png);
+}
+
+#front_status_button.unchanged:after  {
+    background-image: url(../img/icons/tv.png);
+}
+
+#front_status_button.changed:after  {
+    background-image: url(../img/icons/tv_on.png);
+}
+
+#front_info_button:after  {
+    background-image: url(../img/icons/magnifier.png);
+}
+
+/* .front_img_button:hover:before {
+    transform: translate(+5px,+0px);
+}
+.front_img_button:hover:after {
+    transform: translate(+5px,+0px);
+} */
+
+.front_img_button:active:after {
+    filter: brightness(0) invert(1);
+    /* transition-duration: 0s; */
+}

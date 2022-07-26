@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<title>月奈出行</title>
+	<link href="css/foreground.css?v=0.01" rel="stylesheet" type="text/css">
+	<link href="css/main.css?v=0.02" rel="stylesheet" type="text/css">
+	<link href="css/location.css?v=0.03" rel="stylesheet" type="text/css">
+	<link href="css/menu.css?v=0.01" rel="stylesheet" type="text/css">
+	<link href="css/background.css?v=0.01" rel="stylesheet" type="text/css">
+	<link href="css/privacy.css?v=0.03" rel="stylesheet" type="text/css">
+	<link href="css/language.css?v=0.02" rel="stylesheet" type="text/css">
+	<link href="css/calendar.css?v=0.03" rel="stylesheet" type="text/css">
+	<link href="css/option.css?v=0.01" rel="stylesheet" type="text/css">
+	<link href="css/credit.css?v=0.01" rel="stylesheet" type="text/css">
+	<link href="css/location_option.css?v=0.01" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="group" id="here-is-acts">
+		<!-- 这里是存放场景（背景+角色）的div，现在是空的 -->
+		<!-- 在运行时会动态地在这里插入内容 -->
+	</div>
+	<div class="group" id="foreground_group">
+		<div class="center_area">
+			<div id="info_section">
+				<div id="upper_info">
+					<div id="info_temp">N/A</div>
+					<div>
+						<div id="info_location"></div>
+						<div id="info_tempMM">N/A</div>
+						<div id="info_textWeather"></div>
+					</div>
+				</div>
+				<div id="info_textLuna">N/A</div>
+			</div>
+			<div class="group" id="calendar_group">
+				<div class="center_area" id="calendar_area">
+					<div id="calendar_wrapper">
+						<div id="calendar_panel">
+							<div id="calendar_title">
+								🌞 <span lang="zh">当周行程表</span><span lang="ja">今週の日程表</span><span lang="ko">금주의 일정표</span><span lang="en">Schedule This Week</span> ☔
+							</div>
+							<table id="calendar_table">
+								<tr>
+									<th class="crossed"></th>
+
+									<th><span lang="zh">最低温</span><span lang="ja">最低温</span><span lang="ko">최저온</span><span lang="en">Lowest</span></th>
+
+									<th><span lang="zh">最高温</span><span lang="ja">最高温</span><span lang="ko">최고온</span><span lang="en">Highest</span></th>
+
+									<th><span lang="zh">出行计划</span><span lang="ja">出行計画</span><span lang="ko">출행 계획</span><span lang="en">Trip plans</span></th>
+
+									<th><span lang="zh">直播安排</span><span lang="ja">配信日程</span><span lang="ko">생방송 일정</span><span lang="en">Live Schedule</span></th>
+								</tr>
+	                            <tr>
+									<td>
+										<span lang="zh">一</span><span lang="ja">月</span><span lang="ko">월</span><span lang="en">Mon</span>
+									</td>
+									<td id="tempMin_0">0°C</td>
+									<td id="tempMax_0">0°C</td>
+									<td id="plan_0">  </td>
+									<td><font color="#008bda">小小梦魇</font></td>
+								</tr>
+								<tr>
+									<td>
+										<span lang="zh">二</span><span lang="ja">火</span><span lang="ko">화</span><span lang="en">Tue</span>
+									</td>
+									<td id="tempMin_1">0°C</td>
+									<td id="tempMax_1">0°C</td>
+									<td id="plan_1">  </td>
+									<td><font color="#FF0000">吉他弹唱</font></td>
+								</tr>
+								<tr>
+									<td>
+										<span lang="zh">三</span><span lang="ja">水</span><span lang="ko">수</span><span lang="en">Wed</span>
+									</td>
+									<td id="tempMin_2">0°C</td>
+									<td id="tempMax_2">0°C</td>
+									<td id="plan_2">  </td>
+									<td><font color="#008bda">视频鉴赏</font></td>
+								</tr>
+								<tr>
+									<td>
+										<span lang="zh">四</span><span lang="ja">木</span><span lang="ko">목</span><span lang="en">Thu</span>
+									</td>
+									<td id="tempMin_3">0°C</td>
+									<td id="tempMax_3">0°C</td>
+									<td id="plan_3">  </td>
+									<td><font color="#008bda">吉他弹唱</font></td>
+								</tr>
+								<tr>
+									<td>
+										<span lang="zh">五</span><span lang="ja">金</span><span lang="ko">금</span><span lang="en">Fri</span>
+									</td>
+									<td id="tempMin_4">0°C</td>
+									<td id="tempMax_4">0°C</td>
+									<td id="plan_4">  </td>
+									<td><font color="#FF0000">星之卡比</font></td>
+								</tr>
+								<tr>
+									<td>
+										<span lang="zh">六</span><span lang="ja">土</span><span lang="ko">토</span><span lang="en">Sat</span>
+									</td>
+									<td id="tempMin_5">0°C</td>
+									<td id="tempMax_5">0°C</td>
+									<td id="plan_5">  </td>
+									<td><font color="#008bda">冰冰联动</font></td>
+								</tr>
+								<tr>
+									<td>
+										<span lang="zh">日</span><span lang="ja">日</span><span lang="ko">일</span><span lang="en">Sun</span>
+									</td>
+									<td id="tempMin_6">0°C</td>
+									<td id="tempMax_6">0°C</td>
+									<td id="plan_6">  </td>
+									<td><font color="#008bda">英雄联盟</font></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="display_section">
+				<div class="front_img_button" id="front_refresh_button" onclick="refreshWeather()"></div>
+				<div class="front_img_button" id="front_location_button" onclick="earth_onclick()"></div>
+				<div class="front_img_button" id="front_calendar_button" onclick="changePages()"></div>
+				<div class="front_img_button unchanged" id="front_status_button" onclick="location.href='https\://live.bilibili.com/24808180'"></div>
+				<div class="front_img_button" id="front_info_button" onclick="openOptionWindow()"></div>
+			</div>
+		</div>
+	</div>
+	<div class="group" id="menu_group">
+		<div class="center_area" id="panel_area">
+			<div class="menu_content">
+				<div class= "logo_div" id="title"><img class="logo" src="img/assets/yuenaichuxing.png"></div>
+				<div id="start_panel">
+					<button class="start_button" id="menu_button1" onClick="openPrivacyWindow('first')">
+						<span lang="zh">准备出门</span><span lang="ja">準備する</span><span lang="ko">준비하세요</span><span lang="en">Ready</span>
+					</button>
+					<button class="start_button" id="menu_button2" onClick="menu_selectLanguage_onclick()">
+						<span lang="zh">Language</span><span lang="ja">Language</span><span lang="ko">Language</span><span lang="en">Language</span>
+					</button>
+					<!-- <button class="start_button" onClick="menu_privacy_onclick()">隐私协议</button> -->
+					<button class="start_button" id="menu_button3" onclick="menu_credit_onclick()">
+						<span lang="zh">制作名单</span><span lang="ja">作者名簿</span><span lang="ko">저자 명부</span><span lang="en">Producers</span>
+					</button>
+					<button class="start_button" id="menu_button4">
+						<span lang="zh">安卓应用</span><span lang="ja">アンドロイド</span><span lang="ko">안드로이드</span><span lang="en">Android</span>
+					</button>
+				</div>
+			</div>
+			<!-- <div class="front_img_button" id="android_button"></div> -->
+		</div>
+	</div>
+	<div class="group" id="dim_background"></div>
+	<div class="group" id="option_group">
+		<div class="center_area">
+			<div class="panel" id="option_panel">
+				<button class="start_button" onclick="option_selectLanguage_onclick()">
+					<span lang="zh">Language</span><span lang="ja">Language</span><span lang="ko">Language</span><span lang="en">Language</span>
+				</button>
+				<button class="start_button" onclick="option_privacy_onclick()">
+					<span lang="zh">免责声明</span><span lang="ja">免責事項</span><span lang="ko">면책성명</span><span lang="en">Disclaimers</span>
+				</button>
+				<button class="start_button" onclick="option_credit_onclick()">
+					<span lang="zh">制作名单</span><span lang="ja">作者名簿</span><span lang="ko">저자 명부</span><span lang="en">Producers</span>
+				</button>
+				<button class="start_button" onclick="option_return()">
+					<span lang="zh">返回</span><span lang="ja">戻る</span><span lang="ko">되돌아가다</span><span lang="en">Return</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="group" id="location_option_group">
+		<div class="center_area">
+			<div class="panel" id="location_option_panel">
+				<button class="start_button" onClick="getLocation_automaticly_onclick()">
+					<span lang="zh">自动获取</span><span lang="ja">自動取得</span><span lang="ko">자동 취득</span><span lang="en">Auto get</span>
+				</button>
+				<button class="start_button" onClick="getLocation_manually_onclick()">
+					<span lang="zh">手动获取</span><span lang="ja">手動取得</span><span lang="ko">수동 취득</span><span lang="en">Manual get</span>
+				</button>
+				<button class="start_button" onclick="locationOptionReturn()">
+					<span lang="zh">返回</span><span lang="ja">戻る</span><span lang="ko">되돌아가다</span><span lang="en">Return</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="group" id="language_group">
+		<div class="center_area">
+			<div class="panel" id="language_panel">
+				<button class="start_button" id="cn_button" onClick="selectLanguage_cn()">中文</button>
+				<button class="start_button" id="en_button" onClick="selectLanguage_en()">English</button>
+				<button class="start_button" id="jp_button" onClick="selectLanguage_jp()">日本語</button>
+				<button class="start_button" id="ko_button" onClick="selectLanguage_ko()">한국어</button>
+				<button class="start_button" id="language_return" onClick="selectLanguage_return()">
+					<span lang="zh">返回</span><span lang="ja">戻る</span><span lang="ko">되돌아가다</span><span lang="en">Return</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="group" id="privacy_group">
+		<div class="center_area" id="privacy_area">
+			<div id="privacy_title">※ <span lang="zh">隐私和免责声明</span><span lang="ja">個人情報保護方針と免責事項</span><span lang="ko">개인 정보 보호 정책 및 면책성명</span><span lang="en">Privacy policy and disclaimers</span> ※</div>
+			<div id="privacy_content">&nbsp;&nbsp;&nbsp;&nbsp;<b>感谢您对于噗哟噗哟气象台的信赖，在使用月奈出行服务前请务必阅读并同意下列隐私和免责声明，我们将按照以下条款为前提提供服务。特向您说明如下：</b>
+				<br><br>1. 本网页属非盈利性质的个人同好作品，与正在活动的主播“雨音月奈”无任何直接联系，如您对软件有任何疑问或有需要反馈的技术问题请在哔哩哔哩私信联系噗哟噗哟气象台，请勿通过任何方式打扰主播本人，噗哟噗哟感谢您的配合。
+				<br><br>2. 本网页使用的地理位置信息及天气预报数据来自于<a href="https://dev.qweather.com/">和风天气开发平台</a>。为较准确地提供天气预报数据，月奈出行需要获取您的粗略位置信息。本网页采用业内常见的基于网络IP地址获取粗略地理位置的定位方式，不会直接读取您设备的GPS信息，您也可以通过手动查找的方式选择地区并进行查看。
+				<br><br>3. 本网页使用的雨音月奈哔哩哔哩直播开播监测服务数据来自于<a href="https://danmaku.meagames.cn/">紫金葫芦</a>所使用的哔哩哔哩直播检测接口，数据源自哔哩哔哩官方。紫金葫芦是一款十分好用的直播同传弹幕查看工具。
+				<br><br>4. 我们正在努力保护您的信息安全，本网页在任何情况下都不会收集、上传、分享您的任何信息。部署网页的服务器所属腾讯云，且网站域名已通过工信部与公安部双重备案，噗哟不会冒着喝茶的风险给自己找麻烦。
+				<br><br>5. 您应自愿选择是否使用本网页或如何使用本网页，您因使用本网页而可能引发的任何风险和损害由您本人自行承担，月奈出行不对此承担责任。在所有情况下，月奈出行对您使用本网页而造成的任何第三方损害不予承担责任，且由此引起月奈出行其关联的噗哟噗哟气象台被第三方索赔等情况，需由您自行承担责任，并赔偿月奈出行及噗哟噗哟气象台由此遭受的全部损失。我们无法保证和风天气所提供的服务毫无瑕疵（如天气数据的绝对准确），同样无法保证月奈出行必然符合您的特定需求或期待，也无法承诺任何瑕疵将得到更正。因此即使本网页存在因上述瑕疵所造成的一切损失，我们不对此承担任何责任。简单说，预报看看就行，看着要下雨的时候出门的时候还是带个伞吧。
+				<br><br>6. 附件：天气数据供应商和风天气的<a href="https://www.qweather.com/terms/privacy">《隐私政策》</a>和<a href="https://www.qweather.com/terms/disclaimer">《免责协议》</a>。
+			</div>
+			<div id="privacy_choice">
+				<button class="privacy_button" id="privacy_agreed" onclick="onAgreed()">
+					<span lang="zh">同意并继续</span><span lang="ja">確認して続く</span><span lang="ko">확인하고 계속하다</span><span lang="en">Accept & Continue</span>
+				</button>
+				<button class="privacy_button" id="privacy_denied" onclick="onDisagreed()">
+					<span lang="zh">我不同意</span><span lang="ja">取り消す</span><span lang="ko">취소</span><span lang="en">Cancel</span>
+				</button>
+			</div>
+			<div id="privacy_return">
+				<button class="privacy_button" id="privacy_understand" onclick="closePrivacyWindow()">
+					<span lang="zh">我同意</span><span lang="ja">確認する</span><span lang="ko">확인</span><span lang="en">Accept</span>
+				</button>
+			</div>
+				<!-- <div id="privacy_return"><br><button class="start_button" onClick="privacy_return()">我了解了</button></div> -->
+		</div>
+		<!-- <div class="group" id="privacy_alert_group">
+			<div class="center_area" id="privacy_alert_area">
+				<div class="rich_panel">
+					<div>您需要同意协议才能体验月奈出行</div>
+					<div>若您不同意协议，很遗憾我们将无法为您提供服务</div>
+				</div>
+				<div id="privacy_alert_buttons">
+					<button class></button>
+				</div>
+			</div>
+		</div> -->
+	</div>
+	<div class="group" id="credit_group">
+		<div class="center_area" id="credit_area">
+			<div class="rich_panel">
+				<div><span lang="zh">制作名单</span><span lang="ja">作者名簿</span><span lang="ko">저자 명부</span><span lang="en">Producers</span></div>
+				<div class="credit_content">
+					<br>绘师/Illustrator
+					<br>Taka同调士
+					<br>程序/Programmer
+					<br>Xinerama
+					<br>NilClass
+					<br>本地化翻译/Translator
+					<br>桂月
+					<br>问题反馈/Feedback
+					<br>feedback@lunatimes.cn
+					<br>
+					<br>噗哟噗哟气象台
+					<br>PuyoPuyo Observatory
+					<br>2022年7月16日/2022.Jul.16
+				</div>
+				<button class="start_button" onclick="credit_return()">
+					<span lang="zh">返回</span><span lang="ja">戻る</span><span lang="ko">되돌아가다</span><span lang="en">Return</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="group" id="location_group">
+		<div class="group" id="location_window">
+			<div class="center_area" id="location_area">
+				<div class="location_title" id="location_header">* <span lang="zh">请选择您所在的城市</span><span lang="ja">あなたの都市を選択する</span><span lang="ko">당신의 도시를 선택하세요</span><span lang="en">Choose your city</span> *</div>
+				<div class="location_title" id="search_header">
+						<input class="location_input" id="search_bar" 
+						onfocus="searchBarOnfocus()"
+						onblur="searchBarOnBlur()"
+						type="text" placeholder="">
+						<span>|</span>
+						<button id="search_confirm_button" onclick="confirmLocationSearch()">
+							<span lang="zh">查找</span><span lang="ja">検索</span><span lang="ko">검색</span><span lang="en">Search</span>
+						</button>
+				</div>
+				<div class="selectLocation_area" id="cnab_area">
+					<div id="topbar">
+						<table class="location_table">
+							<tr>
+								<th><button class="side_button" onclick="goToCN()">
+									<span lang="zh">国内</span><span lang="ja">中国</span><span lang="ko">중국</span><span lang="en">China</span>
+								</button></th>
+								<th><button class="side_button" onclick="goToAB()">
+									<span lang="zh">海外</span><span lang="ja">海外</span><span lang="ko">해외</span><span lang="en">Abroad</span>
+								</button></th>
+							</tr>
+						</table>
+					</div>
+					<div class="main_selection" id="selection_cn">
+						<div class="selection_header">
+							<div class="sidebar_header">
+								<span lang="zh">省份</span><span lang="ja">省</span><span lang="ko">성</span><span lang="en">Province</span>
+							</div>
+							<div class="cityarea_header">
+								<span lang="zh">城市</span><span lang="ja">城市</span><span lang="ko">성시</span><span lang="en">City</span>
+							</div>
+						</div>
+						<div class="sidebar" id="sidebar_cn">
+							<table class="location_table" id="location_table_cn">
+							</table>
+						</div>
+					</div>
+					<div class="main_selection" id="selection_ab">
+						<div class="selection_header">
+							<div class="sidebar_header">
+								<span lang="zh">国家和地区</span><span lang="ja">国と地域</span><span lang="ko">나라와 지역</span><span lang="en">Country & Region</span>
+							</div>
+							<div class="cityarea_header">
+								<span lang="zh">城市</span><span lang="ja">城市</span><span lang="ko">성시</span><span lang="en">City</span>
+							</div>
+						</div>
+						<div class="sidebar" id="sidebar_ab">
+							<table class="location_table" id="location_table_ab">
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="selectLocation_area" id="search_area">
+					<div id="search_content">
+					</div>
+					<div id="search_lds">
+						<div class= "logo_div"><img class="logo" src="img/assets/yuenaichuxing.png"></div>
+					</div>
+				</div>
+				<div>
+					<div class="location_title" id="location_return" onclick="locationReturn()">* <span lang="zh">返回</span><span lang="ja">戻る</span><span lang="ko">되돌아가다</span><span lang="en">Return</span> *</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="group" id="lds">
+		<div class="center_area" id="lds_area">
+			<div class= "logo_div"><img class="logo" src="img/assets/yuenaichuxing.png"></div>
+		</div>
+	</div>
+	<script src="js/effects.js?v=0.01" type="module"></script>
+	<script src="js/utils.js?v=0.01" type="module"></script>
+	<script src="js/rainlayer.js?v=0.01" type="module"></script>
+	<script src="js/acts/actbase.js?v=0.01" type="module"></script>
+	<script src="js/acts/act1.js?v=0.01" type="module"></script>
+	<script src="js/acts/act2.js?v=0.01" type="module"></script>
+
+	<script src="js/lib/jquery-3.6.0.min.js?v=0.01"></script>
+	<script src="js/lib/gsap.min.js?v=0.01" type="text/javascript"></script>
+	<script src="js/storagemanager.js?v=0.01"></script>
+	<script src="js/actmanager.js?v=0.01" type="module"></script>
+	<script src="js/main.js?v=0.04" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+#credit_group{
+    display: none;
+    opacity: 0;
+}
+
+#credit_area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit_content{
+    margin-bottom: 10px;
+}

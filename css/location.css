@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+#location_group {
+    display: none;
+    overflow: hidden;
+}
+#location_window {
+    background-color: #526190;
+    top: 100%;
+}
+
+#location_header {
+    margin-top: 35px;
+}
+
+.round_button {
+    display: inline-block;
+    background-color: #526190;
+    padding: 7px;
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.location_table   {
+    width: 100%;
+    color: black;
+    border: medium solid #526190;
+    background-color: white;
+    border-collapse: collapse;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#topbar {
+    width: 100%;
+}
+.location_table th  {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    border: medium solid #526190;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.main_selection {
+    height: 200px;
+    width: 100%;
+    /* display: flex; */
+    /* position: relative; */
+}
+.sidebar {
+    width: 40%;
+    overflow-y: scroll;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cityarea {
+    width: 60%;
+    height: inherit;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    overflow-y: scroll;
+    align-items: center;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: medium solid #526190;
+    border-right: medium solid #526190;
+    border-bottom: medium none #526190;
+    border-top: medium solid #526190;
+    display: none;
+}
+.selectLocation_area {
+    position: relative;
+    margin: auto;
+    width: 90%;
+}
+#location_return {
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+	transition-duration: 0.4s;
+    transform: translate(-50%, 0);
+    margin-bottom: 35px;
+}
+/* #location_return:after {
+	content: " ->";
+	display: none;
+	opacity: 0;
+}
+#location_return:hover:after {
+  	opacity: 1;
+	display: unset;
+} */
+.side_button {
+    border: none;
+    background: none;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    color: black;
+}
+
+.side_button:active {
+    filter: brightness(0) invert(1);
+    /* transition-duration: 0s; */
+}
+
+#location_return {
+    cursor: pointer;
+}
+
+.location_title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    width:100%;
+}
+
+.location_input{
+    outline: none;
+    background: white url(../img/icons/search.svg) no-repeat left;
+    
+    transform: translateY(-3px);
+    padding-top: 5px;
+    padding-left: 35px;
+    padding-bottom: 5px;
+    border:none;
+    outline: none;
+    /* line-height: 100%; */
+    width: 55%;
+    font-size: 16px;
+    /* color: inherit; */
+    /* box-sizing: border-box; */
+}
+
+#search_area {
+    overflow: hidden;
+    background: white;
+    display: none;
+    border: medium solid #526190;
+}
+.search_item {
+    width: 100%;
+    border-bottom: thin solid #000000;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+#error_item{
+    border: none;
+    cursor: default;
+}
+
+#search_confirm_button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+}
+
+.sidebar_header{
+    width: 40%;
+    text-align: center;
+    background: white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: medium solid #526190;
+    padding: 2px;
+    font-weight: 700
+}
+
+.cityarea_header{
+    width: 60%;
+    text-align: center;
+    background: white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: medium solid #526190;
+    padding: 2px;
+    font-weight: 700
+}
+
+.selection_header{
+    display: flex;
+}
+
+#search_content{
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+}
+
+#search_lds{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
